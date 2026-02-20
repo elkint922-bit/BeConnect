@@ -13,14 +13,13 @@
 
 <body>
 
-  <header>
-    <h1>BeConnect</h1>
-    <section>
-            <img src="./assets/img/Imagen BeConnect.jpg" alt="logo de la empresa" width="200" height="100">
-            
-        </section> 
+  <header class="header-principal">
+    <div class="logo-container">
+      <img class="logo" src="./assets/img/Imagen BeConnect.jpg" alt="logo de la empresa">
+      <h1 class="brand">BeConnect</h1>
+    </div>
 
-    <nav>
+    <nav class="menu">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#servicios">Servicios</a></li>
@@ -34,256 +33,312 @@
 
   <main>
 
-    <section id="inicio">
-      <h2>Encuentra servicios o ofrece el tuyo</h2>
-      <p>Conectamos clientes con emprendedores locales de belleza y tecnología.</p>
+    <!-- HERO como en el ejemplo: hero / hero-content / hero-buttons / btn -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <h2>Encuentra servicios o ofrece el tuyo</h2>
+        <p>Conectamos clientes con emprendedores locales de belleza y tecnología.</p>
 
-      <div>
-        <a href="#servicios">Buscar servicio</a>
-        <a href="#ofrecer">Ofrecer servicio</a>
+        <div class="hero-buttons">
+          <a href="#servicios" class="btn btn-primary">Buscar servicio</a>
+          <a href="#ofrecer" class="btn btn-secondary">Ofrecer servicio</a>
+        </div>
       </div>
-
-      <h3>Categorías de servicios</h3>
-      <p>Encuentra profesionales en las areas que necesitas</p>
-      
-      <div>
-        <h4>Belleza</h4>
-        <p>Manicure, peluquería, maquillaje, tratamientos y más.</p>
-      </div>
-
-      <div>
-        <h4>Tecnología</h4>
-        <p>Reparación de computadores, celulares, redes y soporte técnico.</p>
-      </div>
-
-      <h3>¿Por qué BeConnect?</h3>
-      <ul>
-        <li>Rápido y fácil</li>
-        <li>Profesionales locales</li>
-        <li>Precios transparentes</li>
-      </ul>
-
-      <h3>¿Listo para comenzar?</h3>
-      <p>Ya sea que busques un servicio o quieras ofrecer el tuyo, estamos aquí para ayudarte</p>
-       <div>
-        <a href="#servicios">Buscar servicio</a>
-        <a href="#ofrecer">Ofrecer servicio</a>
-      </div>
-
     </section>
 
-    <section id="servicios">
-      <h2>Servicios disponibles</h2>
-      <p>Encuentra el profesional que necesitas en tu zona.</p>
+    <!-- CATEGORÍAS (tarjetas reutilizables) -->
+    <section class="categorias">
+      <header class="header-seccion">
+        <h3>Categorías de Servicios</h3>
+        <p>Encuentra profesionales en las áreas que necesitas</p>
+      </header>
 
-      <h3>Filtrar</h3>
-      <button>Belleza</button>
-      <button>Tecnología</button>
+      <div class="contenedor-tarjetas">
+        <article class="tarjeta">
+          <h4>Belleza</h4>
+          <p>Manicure, peluquería, maquillaje, tratamientos y más.</p>
+          <a href="#servicios">Ver servicios →</a>
+        </article>
 
-      <h3>Listado</h3>
-
-      <article>
-        <h4>María Fernández</h4>
-        <p>Manicure y pedicure</p>
-        <p>Categoría: Belleza</p>
-        <p>Desde: $15.000</p>
-        <a href="#solicitar">Ver perfil</a>
-      </article>
-
-      <article>
-        <h4>Carla Rojas</h4>
-        <p>Peluquería y colorimetría</p>
-        <p>Categoría: Belleza</p>
-        <p>Desde: $20.000</p>
-        <a href="#solicitar">Ver perfil</a>
-      </article>
-
-      <article>
-        <h4>TechSolutions</h4>
-        <p>Reparación de computadores</p>
-        <p>Categoría: Tecnología</p>
-        <p>Desde: $30.000</p>
-        <a href="#solicitar">Ver perfil</a>
-      </article>
+        <article class="tarjeta">
+          <h4>Tecnología</h4>
+          <p>Reparación de computadores, celulares, redes y soporte técnico.</p>
+          <a href="#servicios">Ver servicios →</a>
+        </article>
+      </div>
     </section>
 
-      <section id="solicitar">
-      <h2>Solicitar servicio</h2>
-      <p>Completa el formulario y nos pondremos en contacto contigo.</p>
-      
-      <h3>Información de Solicitud</h3>
-      <p>Todos los campos son obligatorios</p>
+    <!-- POR QUÉ (opcional: estilo simple, puedes dejarlo así) -->
+    <section class="beneficios">
+      <header class="header-seccion">
+        <h3>¿Por qué BeConnect?</h3>
+        <p>Una forma rápida y confiable de conectar con profesionales locales</p>
+      </header>
 
-    
-      <form>
-        <label>Nombre completo</label><br>
-        <input type="text" placeholder="Juan Pérez"><br><br>
+      <div class="contenedor-tarjetas">
+        <article class="tarjeta">
+          <h4>Rápido y fácil</h4>
+          <p>Encuentra el servicio que necesitas en minutos.</p>
+        </article>
 
-        <label>Correo</label><br>
-        <input type="email" placeholder="correo@ejemplo.com"><br><br>
+        <article class="tarjeta">
+          <h4>Profesionales locales</h4>
+          <p>Conecta con emprendedores de tu zona.</p>
+        </article>
 
-        <label>Teléfono</label><br>
-        <input type="tel" placeholder="3001234567"><br><br>
+        <article class="tarjeta">
+          <h4>Precios transparentes</h4>
+          <p>Conoce rangos de precio antes de solicitar.</p>
+        </article>
+      </div>
+    </section>
 
-        <label>Categoría</label><br>
-        <input type="text" placeholder="Belleza o Tecnología"><br><br>
+    <!-- CTA FINAL -->
+    <section class="cta">
+      <header class="header-seccion">
+        <h3>¿Listo para comenzar?</h3>
+        <p>Ya sea que busques un servicio o quieras ofrecer el tuyo, estamos aquí para ayudarte.</p>
+      </header>
 
-        <label>Zona / Localidad</label><br>
-        <input type="text" placeholder="Bogotá"><br><br>
+      <div class="hero-buttons">
+        <a href="#servicios" class="btn btn-dark">Buscar servicios</a>
+        <a href="#ofrecer" class="btn btn-secondary">Registrar mi servicio</a>
+      </div>
+    </section>
 
-        <label>Descripción</label><br>
-        <textarea placeholder="Describe el servicio que necesitas"></textarea><br><br>
+    <!-- SERVICIOS -->
+    <section id="servicios" class="servicios">
+      <header class="header-seccion">
+        <h2>Servicios disponibles</h2>
+        <p>Encuentra el profesional que necesitas en tu zona.</p>
+      </header>
+
+      <div class="filtros">
+        <button class="chip" type="button">Todos</button>
+        <button class="chip" type="button">Belleza</button>
+        <button class="chip" type="button">Tecnología</button>
+      </div>
+
+      <!-- Contenedor grid (muy importante para parecerse a la maqueta) -->
+      <div class="services-grid">
+
+        <article class="tarjeta-servicio">
+          <h4>María Fernández</h4>
+          <p>Manicure y pedicure</p>
+          <p>Categoría: Belleza</p>
+          <p>Desde: $15.000</p>
+          <a class="btn btn-dark" href="#solicitar">Ver perfil</a>
+        </article>
+
+        <article class="tarjeta-servicio">
+          <h4>Carla Rojas</h4>
+          <p>Peluquería y colorimetría</p>
+          <p>Categoría: Belleza</p>
+          <p>Desde: $20.000</p>
+          <a class="btn btn-dark" href="#solicitar">Ver perfil</a>
+        </article>
+
+        <article class="tarjeta-servicio">
+          <h4>TechSolutions</h4>
+          <p>Reparación de computadores</p>
+          <p>Categoría: Tecnología</p>
+          <p>Desde: $30.000</p>
+          <a class="btn btn-dark" href="#solicitar">Ver perfil</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SOLICITAR SERVICIO -->
+    <section id="solicitar" class="solicitar">
+      <header class="header-seccion">
+        <h2>Solicitar servicio</h2>
+        <p>Completa el formulario y nos pondremos en contacto contigo.</p>
+      </header>
+
+      <form class="form-card">
+        <label for="nombre">Nombre completo</label>
+        <input id="nombre" type="text" placeholder="Juan Pérez" required>
+
+        <label for="correo">Correo</label>
+        <input id="correo" type="email" placeholder="correo@ejemplo.com" required>
+
+        <label for="telefono">Teléfono</label>
+        <input id="telefono" type="tel" placeholder="3001234567" required>
+
+        <label for="categoria">Categoría</label>
+        <input id="categoria" type="text" placeholder="Belleza o Tecnología" required>
+
+        <label for="zona">Zona / Localidad</label>
+        <input id="zona" type="text" placeholder="Bogotá" required>
+
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" placeholder="Describe el servicio que necesitas" required></textarea>
 
         <button type="submit">Enviar solicitud</button>
       </form>
     </section>
 
-    <section id="ofrecer">
-      <h2>Registrar mi servicio</h2>
-      <p>Completa el formulario para aparecer en nuestro directorio.</p>
+    <!-- OFRECER SERVICIO -->
+    <section id="ofrecer" class="ofrecer">
+      <header class="header-seccion">
+        <h2>Registrar mi servicio</h2>
+        <p>Completa el formulario para aparecer en nuestro directorio.</p>
+      </header>
 
-      <h3>Información del Prestador</h3>
-      <p>Todos los campos son obligatorios</p>
-      
-      <form>
-        <label>Nombre o emprendimiento</label><br>
-        <input type="text"><br><br>
+      <form class="form-card">
+        <label for="emprendimiento">Nombre o emprendimiento</label>
+        <input id="emprendimiento" type="text" placeholder="María Pérez o Estética Bella" required>
 
-        <label>Correo</label><br>
-        <input type="email"><br><br>
+        <label for="correo2">Correo</label>
+        <input id="correo2" type="email" placeholder="correo@ejemplo.com" required>
 
-        <label>Teléfono</label><br>
-        <input type="tel"><br><br>
+        <label for="telefono2">Teléfono</label>
+        <input id="telefono2" type="tel" placeholder="3001234567" required>
 
-        <label>Categoría</label><br>
-        <input type="text"><br><br>
+        <label for="categoria2">Categoría</label>
+        <input id="categoria2" type="text" placeholder="Belleza o Tecnología" required>
 
-        <label>Servicio específico</label><br>
-        <input type="text"><br><br>
+        <label for="servicio">Servicio específico</label>
+        <input id="servicio" type="text" placeholder="Ej: Manicure y Pedicure, Reparación de Computadores" required>
 
-        <label>Descripción del servicio</label><br>
-        <textarea></textarea><br><br>
+        <label for="desc-servicio">Descripción del servicio</label>
+        <textarea id="desc-servicio" placeholder="Describe tu experiencia, horarios y lo que ofreces" required></textarea>
 
-        <label>Precio desde (COP)</label><br>
-        <input type="number"><br><br>
+        <label for="precio">Precio desde (COP)</label>
+        <input id="precio" type="number" placeholder="15000" required>
 
         <button type="submit">Registrar servicio</button>
       </form>
     </section>
 
-    <section= id="acerca">
-
-      <h2>Acerca de BeConnect</h2>
+    <!-- ACERCA -->
+    <section id="acerca" class="acerca">
+      <header class="header-seccion">
+        <h2>Acerca de BeConnect</h2>
         <p>Conectando personas, generando oportunidades</p>
+      </header>
 
-      <h3>Nuestra misión</h3>
-        <p>BeConnect es una plataforma que conecta clientes con emprendedores locales de servicios de belleza y tecnología.
-        Nuestro objetivo es facilitar el acceso a servicios de calidad mientras apoyamos el crecimiento de pequeños negocios 
-        y emprendedores en nuestra comunidad.</p>
-      
-      <h3>¿A quién ayudamos?</h3>
+      <div class="container">
+        <h3>Nuestra misión</h3>
+        <p>
+          BeConnect es una plataforma que conecta clientes con emprendedores locales de servicios de belleza y tecnología.
+          Nuestro objetivo es facilitar el acceso a servicios de calidad mientras apoyamos el crecimiento de pequeños negocios
+          y emprendedores en nuestra comunidad.
+        </p>
+
+        <h3>¿A quién ayudamos?</h3>
         <h4>Para Clientes</h4>
-        <p>Facilitamos la búsqueda de profesionales confiables en tu zona. Ya sea que necesites un servicio de belleza o 
-          soporte técnico, encontrarás opciones verificadas con precios transparentes y disponibilidad inmediata.</p>
+        <p>
+          Facilitamos la búsqueda de profesionales confiables en tu zona. Ya sea que necesites un servicio de belleza o soporte
+          técnico, encontrarás opciones verificadas con precios transparentes y disponibilidad inmediata.
+        </p>
 
         <h4>Para Emprendedores</h4>
-        <p>Brindamos una plataforma para que puedas promocionar tus servicios, llegar a más clientes y hacer crecer 
-        tu negocio. Sin costos iniciales ni comisiones ocultas.</p>
+        <p>
+          Brindamos una plataforma para que puedas promocionar tus servicios, llegar a más clientes y hacer crecer tu negocio.
+          Sin costos iniciales ni comisiones ocultas.
+        </p>
 
-      <h3>Objetivos de Desarrollo Sostenible</h3>
-      <h4>ODS 8: Trabajo decente y crecimiento económico</h4>
-      <p>Contribuimos al desarrollo económico local mediante:</p>
-      <ul>    
+        <h3>Objetivos de Desarrollo Sostenible</h3>
+        <h4>ODS 8: Trabajo decente y crecimiento económico</h4>
+        <p>Contribuimos al desarrollo económico local mediante:</p>
+        <ul>
           <li>Promoción del emprendimiento y trabajo autónomo</li>
           <li>Generación de oportunidades de ingresos para profesionales locales</li>
           <li>Facilitación del acceso a nuevos mercados para pequeños negocios</li>
           <li>Apoyo a la economía local y el consumo de servicios de proximidad</li>
-      </ul>
+        </ul>
 
-      <h4>ODS 9: Industria, innovación e infraestructura</h4>
-      <p>Promovemos la innovación y digitalización mediante:</p>
-      <ul>          
+        <h4>ODS 9: Industria, innovación e infraestructura</h4>
+        <p>Promovemos la innovación y digitalización mediante:</p>
+        <ul>
           <li>Plataforma digital accesible para todos</li>
           <li>Facilitación de servicios tecnológicos a la comunidad</li>
           <li>Impulso a la adopción de herramientas digitales por emprendedores</li>
           <li>Conectividad entre oferta y demanda de servicios</li>
-      </ul>
+        </ul>
 
-      <h3>Confianza y seguridad</h3>
+        <h3>Confianza y seguridad</h3>
         <h4>Reglas básicas de uso</h4>
-      <ul>
-        <li>Todos los usuarios deben proporcionar información veraz y actualizada</li>
-        <li>Los prestadores de servicios son responsables de la calidad de su trabajo</li>
-        <li>Recomendamos siempre coordinar los detalles antes de contratar un servicio</li>
-        <li>Los precios mostrados son referenciales, confirma siempre antes de contratar</li>
-        <li>Mantén la comunicación respetuosa entre todas las partes</li>
-      </ul>
+        <ul>
+          <li>Todos los usuarios deben proporcionar información veraz y actualizada</li>
+          <li>Los prestadores de servicios son responsables de la calidad de su trabajo</li>
+          <li>Recomendamos siempre coordinar los detalles antes de contratar un servicio</li>
+          <li>Los precios mostrados son referenciales, confirma siempre antes de contratar</li>
+          <li>Mantén la comunicación respetuosa entre todas las partes</li>
+        </ul>
 
-      <h4>Compromiso</h4>
-      <p>Trabajamos para conectar clientes y emprendedores en un ambiente de confianza y transparencia. Aunque 
-        verificamos la información básica, recomendamos a los usuarios realizar su propia evaluación antes de 
-        contratar cualquier servicio.</p>
+        <h4>Compromiso</h4>
+        <p>
+          Trabajamos para conectar clientes y emprendedores en un ambiente de confianza y transparencia. Aunque verificamos la información básica,
+          recomendamos a los usuarios realizar su propia evaluación antes de contratar cualquier servicio.
+        </p>
+      </div>
     </section>
 
-     <section id="contacto">
+    <!-- CONTACTO -->
+    <section id="contacto" class="contacto">
+      <header class="header-seccion">
+        <h2>Contacto y Soporte</h2>
+        <p>¿Tienes preguntas? Estamos para ayudarte</p>
+      </header>
 
-      <h2>Contacto y Soporte</h2>
-      <p>¿Tienes preguntas? Estamos para ayudarte</p>
+      <div class="container">
+        <h3>Email</h3>
+        <ul>
+          <li>info@beconnect.com</li>
+          <li>Te daremos una respuesta en menos de 24 horas</li>
+        </ul>
 
-      <h3>Email</h3>
-      <ul>
-        <li>info@beconnect.com</li>
-        <li>Te daremos una respuesta en menos de 24 horas</li>
-      </ul>
+        <h3>Teléfono</h3>
+        <ul>
+          <li>+56 9 1234 5678</li>
+          <li>Lunes a Viernes 8:00 - 18:00 / Sábados 9:00 - 16:00</li>
+        </ul>
 
-      <h3>Teléfono</h3>
-      <ul>
-        <li>+56 9 1234 5678 </li>
-        <li>Lunes a Viernes  8:00 - 18:00 / Sabados 9:00 - 16:00</li>
-      </ul>
+        <h3>Ubicación</h3>
+        <ul>
+          <li>Bogotá, Colombia</li>
+          <li>Atención remota disponible</li>
+        </ul>
 
-      <h3>Ubicación</h3>
-      <ul>
-        <li>Bogotá, Colombia</li>
-        <li>Atención remota disponible</li>
-      </ul>
+        <h3>Redes sociales</h3>
+        <ul>
+          <li>@beconnect</li>
+          <li>Síguenos en nuestras redes sociales</li>
+        </ul>
 
-      <h3>Redes sociales</h3>
-      <ul>
-        <li>@beconnect</li>
-        <li>Siguenos en nuestras redes sociales </li>
-      </ul>
+        <h3>Preguntas Frecuentes</h3>
+        <p>Respuestas a las dudas más comunes</p>
 
-      <h3>Preguntas Frecuentes</h3>
-      <p>Respuestas a las dudas más comunes</p>
+        <h4>¿Cómo busco un servicio?</h4>
+        <p>Navega a la sección "Servicios", filtra por categoría (Belleza o Tecnología) y zona.</p>
 
-      <h4>¿Cómo busco un servicio?</h4>
-      <p>Navega a la sección "Servicios", filtra por categoría (Belleza o Tecnología) y zona. Encontrarás una lista 
-        de prestadores con sus descripciones y precios.</p>
+        <h4>¿Cómo puedo ofrecer mi servicio?</h4>
+        <p>Ve a la sección "Ofrecer Servicio" y completa el formulario con tus datos y la información de tu servicio.</p>
 
-      <h4>¿Cómo puedo ofrecer mi servicio?</h4>
-      <p>Ve a la sección "Ofrecer Servicio" y completa el formulario con tus datos y la información de tu servicio. 
-        Una vez enviado, aparecerás en nuestro directorio.</p>
+        <h4>¿Tiene algún costo usar la plataforma?</h4>
+        <p>Para los usuarios que buscan servicios, es completamente gratuito. Para los prestadores, el registro también es gratuito.</p>
 
-      <h4>¿Tiene algún costo usar la plataforma?</h4>
-      <p>Para los usuarios que buscan servicios, es completamente gratuito. Para los prestadores, el registro también es gratuito.</p>
-      <h4>¿Cómo contacto a un prestador de servicios?</h4>
+        <h4>¿Cómo contacto a un prestador de servicios?</h4>
+        <p>En el perfil de cada prestador encontrarás su información de contacto (teléfono y email).</p>
 
-      <p>En el perfil de cada prestador encontrarás su información de contacto (teléfono y email) para que puedas comunicarte directamente.</p>
-      <h4>¿Verifican a los prestadores de servicios?</h4>
+        <h4>¿Verifican a los prestadores de servicios?</h4>
+        <p>Verificamos la información básica de contacto. Recomendamos evaluar y pedir referencias antes de contratar.</p>
 
-      <p>Verificamos la información básica de contacto. Sin embargo, recomendamos que los usuarios realicen su propia 
-        evaluación y soliciten referencias antes de contratar un servicio.</p>
-        
-      <h4>¿Qué hago si tengo un problema con un servicio?</h4>
-      <p>Los acuerdos de servicio se realizan directamente entre el cliente y el prestador. Si tienes algún inconveniente, 
-        te recomendamos comunicarte directamente con el prestador. Para dudas sobre la plataforma, contáctanos a info@beconnect.com</p>
+        <h4>¿Qué hago si tengo un problema con un servicio?</h4>
+        <p>Los acuerdos se realizan entre cliente y prestador. Para dudas sobre la plataforma, contáctanos a info@beconnect.com</p>
+      </div>
     </section>
 
+  </main>
 
-     <footer>
-    <p>© 2026 BeConnect. Todos los derechos reservados.</p>
+  <footer class="footer-beconnect">
+    <div class="footer-bottom">
+      <p>© 2026 BeConnect. Todos los derechos reservados.</p>
+    </div>
   </footer>
-    
+
 </body>
 </html>

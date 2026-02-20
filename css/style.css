@@ -1,377 +1,357 @@
 /* =========================
-   BeConnect - CSS Nativo
-   Basado en la maqueta
+   BeConnect - CSS (estilo clase)
+   Compatible con el HTML que te dejé
    ========================= */
 
-/* Variables (psicología del color: magenta / morado + neutros) */
-:root{
-  --bg: #ffffff;
-  --text: #111827;
-  --muted: #6b7280;
-
-  --primary: #d100b8;      /* magenta */
-  --primary-2: #7c2cff;    /* morado */
-  --accent: #ff4fd8;
-
-  --card: #ffffff;
-  --line: #e5e7eb;
-
-  --footer: #0b1220;
-
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0,0,0,.08);
-
-  /* Accesibilidad: tamaño base escalable */
-  --fontSize: 16px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*{ margin:0; padding:0; box-sizing:border-box; }
+:root{
+  --primary: #d100b8;
+  --secondary: #7c2cff;
+  --dark: #0b1220;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --radius: 16px;
+  --shadow: 0 12px 26px rgba(0,0,0,0.08);
+  --shadow2: 0 10px 18px rgba(0,0,0,0.06);
+  --max: 1100px;
+}
 
 html{
-  font-family: "Hind Mysuru", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  font-size: var(--fontSize);
+  font-family: "Hind Mysuru", sans-serif;
+  font-weight: 300;
+  background-color: #ffffff;
+  color: #111827;
   scroll-behavior: smooth;
-  background: var(--bg);
-  color: var(--text);
 }
 
-body{ line-height: 1.5; }
+body{
+  line-height: 1.55;
+}
 
-img{ max-width:100%; display:block; }
+img{
+  max-width: 100%;
+  display: block;
+}
 
-a{ color: inherit; text-decoration: none; }
-a:hover{ text-decoration: none; }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
-main{
-  width: min(1100px, 92%);
+/* Contenedor reutilizable */
+.container{
+  width: min(var(--max), 92%);
   margin: 0 auto;
 }
 
 /* =========================
-   Header + Menú
+   Header (como el ejemplo)
    ========================= */
 
-header{
+.header-principal{
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255,255,255,.9);
-  backdrop-filter: blur(8px);
+  background-color: rgba(255,255,255,0.92);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4%;
+  gap: 16px;
 }
 
-header > h1{
-  display:none; /* el logo ya representa la marca */
+.logo-container{
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-header section{
-  width: min(1100px, 92%);
-  margin: 0 auto;
-  padding: 14px 0 0 0;
-  display:flex;
-  align-items:center;
-  gap: 14px;
-}
-
-header section img{
-  width: 52px;
-  height: 52px;
+.logo{
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
   object-fit: cover;
-  border-radius: 12px;
 }
 
-/* menú */
-nav{
-  width: min(1100px, 92%);
-  margin: 0 auto;
-  padding: 8px 0 14px 0;
-}
-
-nav ul{
-  list-style:none;
-  display:flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 18px;
-}
-
-nav a{
-  font-weight: 600;
-  color: var(--text);
-  padding: 8px 10px;
-  border-radius: 10px;
-  transition: background .2s ease, color .2s ease;
-}
-
-nav a:hover{
-  background: #f3f4f6;
-  color: #000;
-}
-
-/* =========================
-   Sección Inicio (Hero)
-   ========================= */
-
-#inicio{
-  margin-top: 20px;
-}
-
-/* Hero bloque */
-#inicio > h2{
-  text-align:center;
-  color: #fff;
-  font-size: clamp(28px, 4vw, 44px);
+.brand{
   font-weight: 800;
-  margin-bottom: 8px;
+  font-size: 1.15rem;
 }
 
-#inicio > p{
-  text-align:center;
-  color: rgba(255,255,255,.92);
-  font-size: 1.05rem;
-  margin-bottom: 16px;
-}
-
-/* Fondo hero: para lograrlo sin cambiar HTML, estilizamos el section */
-#inicio{
-  padding: 70px 0 40px;
-  border-radius: var(--radius);
-  background: linear-gradient(90deg, var(--primary), var(--primary-2));
-  box-shadow: var(--shadow);
-}
-
-/* Botones del hero (son tus <a> dentro del primer div) */
-#inicio > div:first-of-type{
-  display:flex;
-  justify-content:center;
-  gap: 12px;
-  margin-top: 16px;
-  margin-bottom: 40px;
-}
-
-#inicio > div:first-of-type a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap: 10px;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-weight: 700;
-  border: 1px solid rgba(255,255,255,.35);
-  color: #fff;
-  transition: transform .15s ease, background .2s ease;
-}
-
-#inicio > div:first-of-type a:first-child{
-  background: rgba(255,255,255,.14);
-}
-#inicio > div:first-of-type a:last-child{
-  background: rgba(255,255,255,.92);
-  color: #111;
-  border-color: rgba(255,255,255,.8);
-}
-
-#inicio > div:first-of-type a:hover{
-  transform: translateY(-1px);
-}
-
-/* =========================
-   Bloque Categorías
-   ========================= */
-
-#inicio h3{
-  text-align:center;
-  margin-top: 28px;
-  color: #111;
-  background: #fff;
-  display:block;
-  width: fit-content;
-  padding: 10px 16px;
-  border-radius: 999px;
-  margin-left:auto;
-  margin-right:auto;
-  box-shadow: 0 8px 18px rgba(0,0,0,.08);
-}
-
-#inicio > p:nth-of-type(2){
-  text-align:center;
-  color: #111;
-  margin-top: 12px;
-}
-
-/* Las 2 tarjetas de categorías (son los dos div siguientes) */
-#inicio > div:nth-of-type(2),
-#inicio > div:nth-of-type(3){
-  margin: 0 auto;
-  margin-top: 18px;
-  width: min(900px, 92%);
-  background: rgba(255,255,255,.92);
-  border: 1px solid rgba(255,255,255,.6);
-  border-radius: var(--radius);
-  padding: 18px 18px;
-}
-
-#inicio > div:nth-of-type(2) h4,
-#inicio > div:nth-of-type(3) h4{
-  font-size: 1.2rem;
-  font-weight: 800;
-  margin-bottom: 4px;
-}
-
-#inicio > div:nth-of-type(2) p,
-#inicio > div:nth-of-type(3) p{
-  color: #374151;
-}
-
-/* =========================
-   “Por qué BeConnect”
-   ========================= */
-
-#inicio ul{
-  width: min(900px, 92%);
-  margin: 16px auto 0;
+.menu ul{
   list-style: none;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
   gap: 14px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-#inicio ul li{
-  background: rgba(255,255,255,.92);
-  border: 1px solid rgba(255,255,255,.6);
-  border-radius: var(--radius);
-  padding: 16px;
-  text-align:center;
-  font-weight: 700;
-}
-
-/* =========================
-   Bloque final CTA
-   ========================= */
-
-#inicio h3:last-of-type{
-  margin-top: 34px;
-}
-
-#inicio > p:last-of-type{
-  text-align:center;
-  width: min(900px, 92%);
-  margin: 10px auto 0;
-  color: #111;
-}
-
-#inicio > div:last-of-type{
-  display:flex;
-  justify-content:center;
-  gap: 12px;
-  margin-top: 14px;
-  padding-bottom: 10px;
-}
-
-#inicio > div:last-of-type a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 12px 18px;
-  border-radius: 12px;
-  font-weight: 800;
-  background: #111827;
-  color:#fff;
-  transition: transform .15s ease, opacity .2s ease;
-}
-#inicio > div:last-of-type a:last-child{
-  background: #ffffff;
+.menu ul li a{
+  text-decoration: none;
   color: #111827;
-  border: 1px solid #d1d5db;
+  font-weight: 700;
+  font-size: 0.98rem;
+  padding: 8px 10px;
+  border-radius: 12px;
+  transition: background 0.2s ease, transform 0.15s ease;
 }
-#inicio > div:last-of-type a:hover{
+
+.menu ul li a:hover{
+  background-color: #f3f4f6;
   transform: translateY(-1px);
-  opacity: .95;
 }
 
 /* =========================
-   Sección Servicios
+   Main
    ========================= */
 
-#servicios{
-  margin: 48px auto 0;
-  padding: 36px 0;
+main{
+  width: min(var(--max), 92%);
+  margin: 0 auto;
+  padding: 26px 0 40px;
 }
 
-#servicios h2{
-  font-size: clamp(26px, 3vw, 34px);
-  margin-bottom: 6px;
+/* =========================
+   Hero
+   ========================= */
+
+.hero{
+  margin-top: 18px;
+  padding: 80px 18px 50px;
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
 }
 
-#servicios p{
-  color: var(--muted);
+.hero::before{
+  content: "";
+  position: absolute;
+  inset: -60px;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255,255,255,0.18), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(255,255,255,0.14), transparent 40%),
+    radial-gradient(circle at 50% 80%, rgba(255,255,255,0.10), transparent 45%);
+}
+
+.hero-content{
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+}
+
+.hero-content h2{
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.hero-content p{
+  font-size: 1.05rem;
+  opacity: 0.95;
   margin-bottom: 18px;
 }
 
-/* Botones filtro */
-#servicios button{
-  border: 1px solid var(--line);
-  background: #fff;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-right: 10px;
-}
-#servicios button:hover{
-  background: #f3f4f6;
+.hero-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
-/* Cards listadas (article) */
-#servicios article{
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: 0 8px 20px rgba(0,0,0,.06);
-  padding: 18px;
-  margin-top: 18px;
+/* Botones como el ejemplo */
+.btn{
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.15s ease, opacity 0.2s ease;
 }
 
-#servicios article h4{
-  font-size: 1.25rem;
-  font-weight: 900;
+.btn-primary{
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.35);
+  color: #fff;
 }
 
-#servicios article p{
-  margin: 6px 0;
-  color: #374151;
+.btn-secondary{
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.75);
+  color: #111827;
 }
 
-#servicios article a{
-  display:inline-block;
-  margin-top: 12px;
+.btn-dark{
   background: #111827;
   color: #fff;
-  padding: 10px 14px;
-  border-radius: 12px;
-  font-weight: 800;
+}
+
+.btn:hover{
+  transform: translateY(-2px);
+  opacity: 0.97;
 }
 
 /* =========================
-   Formularios (Solicitar / Ofrecer)
+   Encabezados de sección
    ========================= */
 
-#solicitar, #ofrecer{
-  margin: 34px auto 0;
-  padding: 32px 0;
+.header-seccion{
+  text-align: center;
+  margin: 40px auto 18px;
+  width: min(var(--max), 92%);
 }
 
-#solicitar h2, #ofrecer h2{
-  font-size: clamp(26px, 3vw, 34px);
+.header-seccion h2,
+.header-seccion h3{
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 900;
+  margin-bottom: 6px;
 }
 
-#solicitar p, #ofrecer p{
+.header-seccion p{
   color: var(--muted);
-  margin: 8px 0 16px;
+  font-weight: 400;
 }
 
-form{
-  width: min(700px, 100%);
+/* =========================
+   Tarjetas reutilizables
+   ========================= */
+
+.contenedor-tarjetas{
+  width: min(var(--max), 92%);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+}
+
+.tarjeta{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow2);
+  padding: 18px;
+  flex: 1 1 320px;
+  max-width: 520px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 18px 26px rgba(0,0,0,0.10);
+}
+
+.tarjeta h4{
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tarjeta h4::before{
+  content: "";
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.tarjeta p{
+  color: #374151;
+  margin-bottom: 10px;
+}
+
+.tarjeta a{
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* =========================
+   Servicios
+   ========================= */
+
+.servicios{
+  padding: 10px 0 0;
+}
+
+.filtros{
+  width: min(var(--max), 92%);
+  margin: 0 auto 14px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.chip{
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.chip:hover{
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.services-grid{
+  width: min(var(--max), 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.tarjeta-servicio{
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow2);
+  padding: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-servicio:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 18px 26px rgba(0,0,0,0.10);
+}
+
+.tarjeta-servicio h4{
+  font-size: 1.2rem;
+  font-weight: 1000;
+  margin-bottom: 4px;
+}
+
+.tarjeta-servicio p{
+  color: #374151;
+  margin: 6px 0;
+}
+
+/* =========================
+   Formularios
+   ========================= */
+
+.form-card{
+  width: min(760px, 92%);
+  margin: 0 auto;
   background: #fff;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -379,143 +359,119 @@ form{
   box-shadow: var(--shadow);
 }
 
-label{
-  font-weight: 800;
-  display:inline-block;
+.form-card label{
+  font-weight: 900;
+  display: inline-block;
   margin-bottom: 6px;
 }
 
-input, textarea{
+.form-card input,
+.form-card textarea{
   width: 100%;
-  padding: 12px 12px;
+  padding: 12px;
+  border-radius: 14px;
   border: 1px solid #d1d5db;
-  border-radius: 12px;
   outline: none;
   font-family: inherit;
+  margin-bottom: 14px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-textarea{
-  min-height: 110px;
+.form-card textarea{
+  min-height: 120px;
   resize: vertical;
 }
 
-input:focus, textarea:focus{
+.form-card input:focus,
+.form-card textarea:focus{
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(209,0,184,.12);
+  box-shadow: 0 0 0 4px rgba(209,0,184,0.12);
 }
 
-form button{
+.form-card button{
   width: 100%;
-  margin-top: 12px;
-  border: none;
   padding: 12px 14px;
-  border-radius: 12px;
+  border: none;
+  border-radius: 14px;
   background: #111827;
   color: #fff;
-  font-weight: 900;
+  font-weight: 1000;
   cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.2s ease;
 }
 
-form button:hover{
-  opacity: .95;
+.form-card button:hover{
+  transform: translateY(-1px);
+  opacity: 0.96;
 }
 
 /* =========================
-   Acerca
+   Acerca y Contacto (texto)
    ========================= */
 
-#acerca{
-  margin: 36px auto 0;
-  padding: 36px 0;
+.acerca .container,
+.contacto .container{
+  width: min(var(--max), 92%);
+  margin: 0 auto;
 }
 
-#acerca h2{
-  font-size: clamp(26px, 3vw, 34px);
-  margin-bottom: 6px;
+.acerca h3, .contacto h3{
+  margin-top: 14px;
+  font-weight: 900;
 }
 
-#acerca h3{
-  margin-top: 18px;
-  font-size: 1.2rem;
+.acerca h4, .contacto h4{
+  margin-top: 12px;
+  font-weight: 900;
 }
 
-#acerca p, #acerca li{
+.acerca p, .contacto p,
+.acerca li, .contacto li{
   color: #374151;
 }
 
-#acerca ul{
+.acerca ul, .contacto ul{
   padding-left: 18px;
   margin-top: 8px;
-}
-
-/* =========================
-   Contacto
-   ========================= */
-
-#contacto{
-  margin: 36px auto 0;
-  padding: 36px 0 50px;
-}
-
-#contacto h2{
-  font-size: clamp(26px, 3vw, 34px);
-  margin-bottom: 6px;
-}
-
-#contacto h3{
-  margin-top: 16px;
-}
-
-/* FAQ */
-#contacto h4{
-  margin-top: 14px;
-  font-size: 1.05rem;
 }
 
 /* =========================
    Footer
    ========================= */
 
-footer{
+.footer-beconnect{
   margin-top: 40px;
-  background: var(--footer);
+  background: var(--dark);
   color: #fff;
-  padding: 26px 0;
-  text-align:center;
+  padding: 30px 0;
+  text-align: center;
 }
 
-footer p{
-  width: min(1100px, 92%);
+.footer-bottom{
+  width: min(var(--max), 92%);
   margin: 0 auto;
-  color: rgba(255,255,255,.9);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 18px;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
 }
 
 /* =========================
-   Responsivo
+   Responsive
    ========================= */
 
 @media (max-width: 900px){
-  #inicio ul{
+  .services-grid{
     grid-template-columns: 1fr;
   }
-  nav ul{
+
+  .menu ul{
     justify-content: center;
-  }
-  #inicio{
-    padding: 50px 0 30px;
   }
 }
 
 @media (max-width: 520px){
-  #inicio > div:first-of-type,
-  #inicio > div:last-of-type{
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #inicio > div:first-of-type a,
-  #inicio > div:last-of-type a{
-    width: min(320px, 92%);
-    text-align:center;
+  .hero{
+    padding: 60px 14px 40px;
   }
 }
