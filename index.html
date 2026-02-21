@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Mysuru:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css">
-<script src="https://kit.fontawesome.com/482a4222a7.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7b5173599f.js" crossorigin="anonymous"></script>
   <title>BeConnect</title>
 </head>
 
@@ -16,7 +16,7 @@
   <header class="header-principal">
     <div class="logo-container">
       <img class="logo" src="./assets/img/Imagen BeConnect.jpg" alt="logo de la empresa">
-      <h1 class="brand">BeConnect</h1>
+      <h1 class="brand"></h1>
     </div>
 
     <nav class="menu">
@@ -33,20 +33,21 @@
 
   <main>
 
-    <!-- HERO como en el ejemplo: hero / hero-content / hero-buttons / btn -->
+    <!-- HERO -->
     <section id="inicio" class="hero">
       <div class="hero-content">
         <h2>Encuentra servicios o ofrece el tuyo</h2>
         <p>Conectamos clientes con emprendedores locales de belleza y tecnología.</p>
 
         <div class="hero-buttons">
-          <a href="#servicios" class="btn btn-primary">Buscar servicio</a>
-          <a href="#ofrecer" class="btn btn-secondary">Ofrecer servicio</a>
+          <a href="#servicios" class="btn btn-primary"><i class="fa-solid fa-magnifying-glass"></i> Buscar servicio</a>
+          <a href="#ofrecer" class="btn btn-secondary"><i class="fa-solid fa-bag-shopping"></i> Ofrecer servicio</a>
+          
         </div>
       </div>
     </section>
 
-    <!-- CATEGORÍAS (tarjetas reutilizables) -->
+   
     <section class="categorias">
       <header class="header-seccion">
         <h3>Categorías de Servicios</h3>
@@ -54,21 +55,29 @@
       </header>
 
       <div class="contenedor-tarjetas">
-        <article class="tarjeta">
-          <h4>Belleza</h4>
-          <p>Manicure, peluquería, maquillaje, tratamientos y más.</p>
-          <a href="#servicios">Ver servicios →</a>
-        </article>
+       <article class="tarjeta">
+         <div class="icono-categoria">
+           <i class="fa-solid fa-wand-magic-sparkles"></i>
+         </div>
 
-        <article class="tarjeta">
-          <h4>Tecnología</h4>
-          <p>Reparación de computadores, celulares, redes y soporte técnico.</p>
+         <h4>Belleza</h4>
+         <p>Manicure, peluquería, maquillaje, tratamientos y más.</p>
+        <a href="#servicios">Ver servicios →</a>
+       </article>
+
+     <article class="tarjeta">
+       <div class="icono-categoria">
+        <i class="fa-solid fa-laptop-code"></i>
+       </div>
+
+         <h4>Tecnología</h4>
+         <p>Reparación de computadores, celulares, redes y soporte técnico.</p>
           <a href="#servicios">Ver servicios →</a>
-        </article>
-      </div>
+      </article>
+    </div>
     </section>
 
-    <!-- POR QUÉ (opcional: estilo simple, puedes dejarlo así) -->
+  
     <section class="beneficios">
       <header class="header-seccion">
         <h3>¿Por qué BeConnect?</h3>
@@ -77,16 +86,19 @@
 
       <div class="contenedor-tarjetas">
         <article class="tarjeta">
+          <i class="fa-solid fa-1"></i>
           <h4>Rápido y fácil</h4>
           <p>Encuentra el servicio que necesitas en minutos.</p>
         </article>
 
         <article class="tarjeta">
+          <i class="fa-solid fa-2"></i>
           <h4>Profesionales locales</h4>
           <p>Conecta con emprendedores de tu zona.</p>
         </article>
 
         <article class="tarjeta">
+          <i class="fa-solid fa-3"></i>
           <h4>Precios transparentes</h4>
           <p>Conoce rangos de precio antes de solicitar.</p>
         </article>
@@ -119,32 +131,93 @@
         <button class="chip" type="button">Tecnología</button>
       </div>
 
-      <!-- Contenedor grid (muy importante para parecerse a la maqueta) -->
-      <div class="services-grid">
+      
+      <div class="services-grid"> <!-- Contenedor grid -->
 
         <article class="tarjeta-servicio">
-          <h4>María Fernández</h4>
-          <p>Manicure y pedicure</p>
-          <p>Categoría: Belleza</p>
-          <p>Desde: $15.000</p>
-          <a class="btn btn-dark" href="#solicitar">Ver perfil</a>
-        </article>
+  <div class="servicio-top">
+    <div>
+      <h4 class="servicio-nombre">María Fernández</h4>
+      <p class="servicio-subtitulo">Manicure y Pedicura</p>
+    </div>
 
-        <article class="tarjeta-servicio">
-          <h4>Carla Rojas</h4>
-          <p>Peluquería y colorimetría</p>
-          <p>Categoría: Belleza</p>
-          <p>Desde: $20.000</p>
-          <a class="btn btn-dark" href="#solicitar">Ver perfil</a>
-        </article>
+    <span class="badge badge-belleza">Belleza</span>
+  </div>
 
-        <article class="tarjeta-servicio">
-          <h4>TechSolutions</h4>
-          <p>Reparación de computadores</p>
-          <p>Categoría: Tecnología</p>
-          <p>Desde: $30.000</p>
-          <a class="btn btn-dark" href="#solicitar">Ver perfil</a>
-        </article>
+  <p class="servicio-desc">
+    Especialista en manicure, pedicure y diseño de uñas. Más de 5 años de experiencia. Productos de calidad premium.
+  </p>
+
+  <div class="servicio-meta">
+    <p><i class="fa-solid fa-location-dot"></i> Calle 23 #45-78, Lisboa</p>
+    <p><i class="fa-solid fa-dollar-sign"></i> Desde $15.000</p>
+  </div>
+
+  <a class="btn-servicio" href="#solicitar">Ver perfil</a>
+</article>
+
+  <article class="tarjeta-servicio">
+   <div class="servicio-top">
+    <div>
+      <h4 class="servicio-nombre">Carla Rojas</h4>
+      <p class="servicio-subtitulo">Peluquería y Colorimetría</p>
+    </div>
+    <span class="badge badge-belleza">Belleza</span>
+  </div>
+
+  <p class="servicio-desc">
+    Estilista profesional especializada en cortes modernos, colorimetría y tratamientos capilares.
+  </p>
+
+  <div class="servicio-meta">
+    <p><i class="fa-solid fa-location-dot"></i> Calle 58 #35-99, Engativá</p>
+    <p><i class="fa-solid fa-dollar-sign"></i> Desde $20.000</p>
+  </div>
+
+  <a class="btn-servicio" href="#solicitar">Ver perfil</a>
+</article>
+
+<article class="tarjeta-servicio">
+  <div class="servicio-top">
+    <div>
+      <h4 class="servicio-nombre">Daniela Silva</h4>
+      <p class="servicio-subtitulo">Maquillaje Profesional</p>
+    </div>
+    <span class="badge badge-belleza">Belleza</span>
+  </div>
+
+  <p class="servicio-desc">
+    Maquilladora profesional para eventos, novias y sesiones fotográficas. Productos hipoalergénicos.
+  </p>
+
+  <div class="servicio-meta">
+    <p><i class="fa-solid fa-location-dot"></i> Calle 105 #58-67, Soacha</p>
+    <p><i class="fa-solid fa-dollar-sign"></i> Desde $25.000</p>
+  </div>
+
+  <a class="btn-servicio" href="#solicitar">Ver perfil</a>
+</article>
+
+<article class="tarjeta-servicio">
+  <div class="servicio-top">
+    <div>
+      <h4 class="servicio-nombre">TechSolutions</h4>
+      <p class="servicio-subtitulo">Reparación de Computadores</p>
+    </div>
+    <span class="badge badge-tech">Tecnología</span>
+  </div>
+
+  <p class="servicio-desc">
+    Servicio técnico especializado en reparación de PC y laptops. Diagnóstico gratuito. Garantía en todas las reparaciones.
+  </p>
+
+  <div class="servicio-meta">
+    <p><i class="fa-solid fa-location-dot"></i> Calle 75 #36-10, Patio Bonito</p>
+    <p><i class="fa-solid fa-dollar-sign"></i> Desde $30.000</p>
+  </div>
+
+  <a class="btn-servicio" href="#solicitar">Ver perfil</a>
+</article>
 
       </div>
     </section>
@@ -214,123 +287,179 @@
 
     <!-- ACERCA -->
     <section id="acerca" class="acerca">
-      <header class="header-seccion">
-        <h2>Acerca de BeConnect</h2>
-        <p>Conectando personas, generando oportunidades</p>
-      </header>
 
-      <div class="container">
-        <h3>Nuestra misión</h3>
-        <p>
-          BeConnect es una plataforma que conecta clientes con emprendedores locales de servicios de belleza y tecnología.
-          Nuestro objetivo es facilitar el acceso a servicios de calidad mientras apoyamos el crecimiento de pequeños negocios
-          y emprendedores en nuestra comunidad.
-        </p>
+  <header class="header-seccion">
+    <h2>Acerca de BeConnect</h2>
+    <p>Conectando personas, generando oportunidades</p>
+  </header>
 
-        <h3>¿A quién ayudamos?</h3>
-        <h4>Para Clientes</h4>
-        <p>
-          Facilitamos la búsqueda de profesionales confiables en tu zona. Ya sea que necesites un servicio de belleza o soporte
-          técnico, encontrarás opciones verificadas con precios transparentes y disponibilidad inmediata.
-        </p>
+  <div class="container">
 
-        <h4>Para Emprendedores</h4>
-        <p>
-          Brindamos una plataforma para que puedas promocionar tus servicios, llegar a más clientes y hacer crecer tu negocio.
-          Sin costos iniciales ni comisiones ocultas.
-        </p>
+    
+    <div class="acerca-card">
+      <h3>Nuestra misión</h3>
+      <p>
+        BeConnect es una plataforma que conecta clientes con emprendedores locales
+        de servicios de belleza y tecnología. Nuestro objetivo es facilitar el acceso
+        a servicios de calidad mientras apoyamos el crecimiento de pequeños negocios
+        y emprendedores en nuestra comunidad.
+      </p>
+    </div>
 
-        <h3>Objetivos de Desarrollo Sostenible</h3>
-        <h4>ODS 8: Trabajo decente y crecimiento económico</h4>
+    
+    <div class="acerca-card">
+      <h3>¿A quién ayudamos?</h3>
+
+      <h4>Para Clientes</h4>
+      <p>
+        Facilitamos la búsqueda de profesionales confiables en tu zona. Ya sea que
+        necesites un servicio de belleza o soporte técnico, encontrarás opciones
+        verificadas con precios transparentes y disponibilidad inmediata.
+      </p>
+
+      <h4>Para Emprendedores</h4>
+      <p>
+        Brindamos una plataforma para que puedas promocionar tus servicios,
+        llegar a más clientes y hacer crecer tu negocio. Sin costos iniciales
+        ni comisiones ocultas.
+      </p>
+    </div>
+
+  
+    <header class="header-seccion">
+      <h3>Objetivos de Desarrollo Sostenible</h3>
+    </header>
+
+    <div class="acerca-grid">
+
+      <div class="acerca-card">
+        <h4>ODS 8: Trabajo Decente y Crecimiento Económico</h4>
         <p>Contribuimos al desarrollo económico local mediante:</p>
         <ul>
           <li>Promoción del emprendimiento y trabajo autónomo</li>
           <li>Generación de oportunidades de ingresos para profesionales locales</li>
-          <li>Facilitación del acceso a nuevos mercados para pequeños negocios</li>
-          <li>Apoyo a la economía local y el consumo de servicios de proximidad</li>
+          <li>Facilitación del acceso a nuevos mercados</li>
+          <li>Apoyo a la economía local</li>
         </ul>
+      </div>
 
-        <h4>ODS 9: Industria, innovación e infraestructura</h4>
+      <div class="acerca-card">
+        <h4>ODS 9: Industria, Innovación e Infraestructura</h4>
         <p>Promovemos la innovación y digitalización mediante:</p>
         <ul>
           <li>Plataforma digital accesible para todos</li>
-          <li>Facilitación de servicios tecnológicos a la comunidad</li>
-          <li>Impulso a la adopción de herramientas digitales por emprendedores</li>
-          <li>Conectividad entre oferta y demanda de servicios</li>
+          <li>Facilitación de servicios tecnológicos</li>
+          <li>Impulso a herramientas digitales</li>
+          <li>Conectividad entre oferta y demanda</li>
         </ul>
-
-        <h3>Confianza y seguridad</h3>
-        <h4>Reglas básicas de uso</h4>
-        <ul>
-          <li>Todos los usuarios deben proporcionar información veraz y actualizada</li>
-          <li>Los prestadores de servicios son responsables de la calidad de su trabajo</li>
-          <li>Recomendamos siempre coordinar los detalles antes de contratar un servicio</li>
-          <li>Los precios mostrados son referenciales, confirma siempre antes de contratar</li>
-          <li>Mantén la comunicación respetuosa entre todas las partes</li>
-        </ul>
-
-        <h4>Compromiso</h4>
-        <p>
-          Trabajamos para conectar clientes y emprendedores en un ambiente de confianza y transparencia. Aunque verificamos la información básica,
-          recomendamos a los usuarios realizar su propia evaluación antes de contratar cualquier servicio.
-        </p>
       </div>
-    </section>
+
+    </div>
+
+    <div class="acerca-card">
+      <h3>Confianza y Seguridad</h3>
+
+      <h4>Reglas básicas de uso</h4>
+      <ul>
+        <li>Información veraz y actualizada</li>
+        <li>Responsabilidad del prestador sobre su servicio</li>
+        <li>Coordinar detalles antes de contratar</li>
+        <li>Confirmar precios antes de pagar</li>
+        <li>Mantener comunicación respetuosa</li>
+      </ul>
+
+      <h4>Compromiso</h4>
+      <p>
+        Trabajamos para conectar clientes y emprendedores en un ambiente
+        de confianza y transparencia. Recomendamos siempre evaluar y confirmar
+        información antes de contratar cualquier servicio.
+      </p>
+    </div>
+
+  </div>
+
+</section>
 
     <!-- CONTACTO -->
-    <section id="contacto" class="contacto">
-      <header class="header-seccion">
-        <h2>Contacto y Soporte</h2>
-        <p>¿Tienes preguntas? Estamos para ayudarte</p>
-      </header>
+   <section id="contacto" class="contacto">
+  <header class="header-seccion">
+    <h2>Contacto y soporte</h2>
+    <p>¿Tienes preguntas? Estamos para ayudarte</p>
+  </header>
 
-      <div class="container">
-        <h3>Email</h3>
-        <ul>
-          <li>info@beconnect.com</li>
-          <li>Te daremos una respuesta en menos de 24 horas</li>
-        </ul>
+  <div class="contacto-grid">
 
-        <h3>Teléfono</h3>
-        <ul>
-          <li>+56 9 1234 5678</li>
-          <li>Lunes a Viernes 8:00 - 18:00 / Sábados 9:00 - 16:00</li>
-        </ul>
-
-        <h3>Ubicación</h3>
-        <ul>
-          <li>Bogotá, Colombia</li>
-          <li>Atención remota disponible</li>
-        </ul>
-
-        <h3>Redes sociales</h3>
-        <ul>
-          <li>@beconnect</li>
-          <li>Síguenos en nuestras redes sociales</li>
-        </ul>
-
-        <h3>Preguntas Frecuentes</h3>
-        <p>Respuestas a las dudas más comunes</p>
-
-        <h4>¿Cómo busco un servicio?</h4>
-        <p>Navega a la sección "Servicios", filtra por categoría (Belleza o Tecnología) y zona.</p>
-
-        <h4>¿Cómo puedo ofrecer mi servicio?</h4>
-        <p>Ve a la sección "Ofrecer Servicio" y completa el formulario con tus datos y la información de tu servicio.</p>
-
-        <h4>¿Tiene algún costo usar la plataforma?</h4>
-        <p>Para los usuarios que buscan servicios, es completamente gratuito. Para los prestadores, el registro también es gratuito.</p>
-
-        <h4>¿Cómo contacto a un prestador de servicios?</h4>
-        <p>En el perfil de cada prestador encontrarás su información de contacto (teléfono y email).</p>
-
-        <h4>¿Verifican a los prestadores de servicios?</h4>
-        <p>Verificamos la información básica de contacto. Recomendamos evaluar y pedir referencias antes de contratar.</p>
-
-        <h4>¿Qué hago si tengo un problema con un servicio?</h4>
-        <p>Los acuerdos se realizan entre cliente y prestador. Para dudas sobre la plataforma, contáctanos a info@beconnect.com</p>
+    <article class="contacto-card">
+      <div class="contacto-icon">
+        <i class="fa-solid fa-envelope"></i>
       </div>
-    </section>
+      <div>
+        <h3>Email</h3>
+        <a class="contacto-link" href="mailto:info@beconnect.com">info@beconnect.com</a>
+        <p>Te daremos una respuesta en menos de 24 horas</p>
+      </div>
+    </article>
+
+    <article class="contacto-card">
+      <div class="contacto-icon">
+        <i class="fa-solid fa-phone"></i>
+      </div>
+      <div>
+        <h3>Teléfono</h3>
+        <p>+56 9 1234 5678</p>
+        <p>Lunes a Viernes 8:00 - 18:00<br>Sabados 9:00 - 16:00</p>
+      </div>
+    </article>
+
+    <article class="contacto-card">
+      <div class="contacto-icon">
+        <i class="fa-solid fa-location-dot"></i>
+      </div>
+      <div>
+        <h3>Ubicación</h3>
+        <p>Bogotá, Colombia</p>
+        <p>Atención remota disponible</p>
+      </div>
+    </article>
+
+    <article class="contacto-card">
+      <div class="contacto-icon">
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+      <div>
+        <h3>Redes Sociales</h3>
+        <p class="contacto-link">@beconnect</p>
+        <p>Síguenos en nuestras redes sociales</p>
+      </div>
+    </article>
+
+  </div>
+
+  <article class="faq-card">
+    <div class="preguntas-fre">
+    <h3>Preguntas Frecuentes</h3>
+    <p class="faq-sub">Respuestas a las dudas más comunes</p>
+    </div>
+
+    <h4>¿Cómo busco un servicio?</h4>
+    <p>Navega a la sección "Servicios", filtra por categoría (Belleza o Tecnología) y zona.</p>
+
+    <h4>¿Cómo puedo ofrecer mi servicio?</h4>
+    <p>Ve a la sección "Ofrecer Servicio" y completa el formulario con tus datos.</p>
+
+    <h4>¿Tiene algún costo usar la plataforma?</h4>
+    <p>Para usuarios y prestadores, el uso y registro es gratuito.</p>
+
+    <h4>¿Cómo contacto a un prestador de servicios?</h4>
+    <p>En el perfil de cada prestador encontrarás teléfono y email para comunicarte directamente.</p>
+
+    <h4>¿Verifican a los prestadores de servicios?</h4>
+    <p>Verificamos la información básica de contacto. Recomendamos solicitar referencias antes de contratar.</p>
+
+    <h4>¿Qué hago si tengo un problema con un servicio?</h4>
+    <p>Los acuerdos se realizan entre cliente y prestador. Para dudas sobre la plataforma: info@beconnect.com</p>
+  </article>
+</section>
 
   </main>
 
