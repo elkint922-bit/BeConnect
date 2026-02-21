@@ -46,9 +46,8 @@ a{
   margin: 0 auto;
 }
 
-/* =========================
-   Header
-   ========================= */
+/* 
+   Header */
 
 .header-principal{
   width: 100%;
@@ -109,9 +108,9 @@ a{
   transform: translateY(-1px);
 }
 
-/* =========================
+/* 
    Main
-   ========================= */
+    */
 
 main{
   width: min(var(--max), 92%);
@@ -119,9 +118,9 @@ main{
   padding: 26px 0 40px;
 }
 
-/* =========================
+/* 
    Hero
-   ========================= */
+   */
 
 .hero{
   margin-top: 18px;
@@ -202,9 +201,9 @@ main{
   opacity: 0.97;
 }
 
-/* =========================
+/* 
    Encabezados de sección
-   ========================= */
+    */
 
 .header-seccion{
   text-align: center;
@@ -224,9 +223,9 @@ main{
   font-weight: 400;
 }
 
-/* =====================
+/*
    Tarjetas
-   ===================== */
+   */
 
 .contenedor-tarjetas{
   width: min(var(--max), 92%);
@@ -288,9 +287,9 @@ main{
   color: var(--primary);
 }
 
-/* =========================
+/* 
    Servicios
-   ========================= */
+    */
 
 .servicios{
   padding: 10px 0 0;
@@ -346,7 +345,7 @@ main{
   box-shadow: 0 18px 26px rgba(0,0,0,0.10);
 }
 
-/* parte superior: nombre + badge */
+/* parte superior nombre + badge */
 .servicio-top{
   display: flex;
   justify-content: space-between;
@@ -427,9 +426,9 @@ main{
   transform: translateY(-1px);
 }
 
-/* =========================
+/* 
    Formularios
-   ========================= */
+    */
 
 .form-card{
   width: min(760px, 92%);
@@ -487,9 +486,9 @@ main{
   opacity: 0.96;
 }
 
-/* =========================
+/* 
    Acerca y Contacto 
-   ========================= */
+    */
 
 .acerca{
   background: #f3f4f6;
@@ -627,30 +626,90 @@ main{
   margin-top: 6px;
 }
 
-/* =========================
+/* 
    Footer
-   ========================= */
+   */
 
 .footer-beconnect{
-  margin-top: 40px;
+  margin-top: 50px;
   background: var(--dark);
   color: #fff;
-  padding: 30px 0;
-  text-align: center;
+  padding: 32px 0 18px;
 }
 
-.footer-bottom{
+.footer-content{
   width: min(var(--max), 92%);
   margin: 0 auto;
-  border-top: 1px solid rgba(255,255,255,0.12);
-  padding-top: 18px;
-  color: rgba(255,255,255,0.9);
-  font-weight: 600;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  align-items: start;
 }
 
-/* =========================
-   Responsive
-   ========================= */
+.footer-title{
+  font-size: 1.05rem;
+  font-weight: 1000;
+  margin-bottom: 12px;
+}
+
+.footer-text{
+  color: rgba(255,255,255,0.85);
+  font-weight: 500;
+  line-height: 1.5;
+  max-width: 320px;
+}
+
+.footer-links{
+  list-style: disc;
+  padding-left: 18px;
+  margin: 0;
+}
+
+.footer-links li{
+  margin-bottom: 8px;
+}
+
+.footer-links a{
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Línea divisoria */
+.footer-line{
+  width: min(var(--max), 92%);
+  margin: 22px auto 14px;
+  height: 1px;
+  background: rgba(255,255,255,0.18);
+}
+
+/* Parte inferior centrada */
+.footer-bottom{
+  text-align: center;
+  color: rgba(255,255,255,0.9);
+  font-weight: 600;
+  padding-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .footer-content{
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .footer-text{
+    max-width: 100%;
+  }
+}
+
+
 
 @media (max-width: 900px){
   .services-grid{
