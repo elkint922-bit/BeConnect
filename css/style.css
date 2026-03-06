@@ -6,24 +6,23 @@
   box-sizing: border-box;
 }
 
-:root{
-  --primary: #d100b8;
-  --secondary: #7c2cff;
-  --dark: #0b1220;
-  --muted: #6b7280;
-  --line: #e5e7eb;
-  --radius: 16px;
-  --shadow: 0 12px 26px rgba(0,0,0,0.08);
-  --shadow2: 0 10px 18px rgba(0,0,0,0.06);
-  --max: 1100px;
-}
+/*Paleta de colores
+  #d100b8
+  #7c2cff
+  #0b1220
+  #6b7280
+  #e5e7eb
+*/
 
 html{
-  font-family: "Hind Mysuru", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 300;
   background-color: #ffffff;
   color: #111827;
   scroll-behavior: smooth;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: "Poppins", sans-serif;
 }
 
 body{
@@ -42,12 +41,11 @@ a{
 
 /* Contenedor */
 .container{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 0 auto;
 }
 
-/* 
-   Header */
+/* Header */
 
 .header-principal{
   width: 100%;
@@ -56,13 +54,12 @@ a{
   z-index: 50;
   background-color: rgba(255,255,255,0.92);
   backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #e5e7eb;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 4%;
   gap: 16px;
-  
 }
 
 .logo-container{
@@ -73,11 +70,9 @@ a{
 
 .logo{
   width: 200px;
-
   object-fit: cover;
-    margin: 0 auto;
-    border-radius: 12px;
-
+  margin: 0 auto;
+  border-radius: 12px;
 }
 
 .brand{
@@ -104,30 +99,61 @@ a{
 }
 
 .menu ul li a:hover{
-  background-color: #f3f4f6;
+  background-color: #d100b921;
   transform: translateY(-1px);
 }
+/*MIGAS */
+.migas-pan{
+  width: min(1100px, 92%);
+  margin: 14px auto 0;
+  font-size: 0.95rem;
+  position: sticky;
+  top: 86px;
+  z-index: 40;
+  background: #ffffff00;
+  padding: 10px 0;
+}
 
-/* 
-   Main
-    */
+.migas-pan p{
+  color: #6b7280;
+}
+
+.migas-pan a{
+  color: #111827;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.migas-pan span{
+  margin: 0 4px;
+}
+
+.modo-contraste .migas-pan{
+  background: #000000 !important;
+}
+
+.modo-contraste .migas-pan p,
+.modo-contraste .migas-pan a,
+.modo-contraste .migas-pan span{
+  color: #ffffff !important;
+}
+
+/* Main */
 
 main{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 0 auto;
   padding: 26px 0 40px;
 }
 
-/* 
-   Hero
-   */
+/* Hero */
 
 .hero{
   margin-top: 18px;
   padding: 80px 18px 50px;
-  border-radius: var(--radius);
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  box-shadow: var(--shadow);
+  border-radius: 16px;
+  background: linear-gradient(90deg, #d100b8, #7c2cff);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.08);
   position: relative;
   overflow: hidden;
 }
@@ -187,7 +213,7 @@ main{
 
 .btn-secondary{
   background: rgba(255,255,255,0.92);
-  border: 1px solid var(--dark);
+  border: 1px solid #0b1220;
   color: #111827;
 }
 
@@ -201,14 +227,12 @@ main{
   opacity: 0.97;
 }
 
-/* 
-   Encabezados de sección
-    */
+/* Encabezados de sección */
 
 .header-seccion{
   text-align: center;
   margin: 40px auto 18px;
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
 }
 
 .header-seccion h2,
@@ -219,16 +243,14 @@ main{
 }
 
 .header-seccion p{
-  color: var(--muted);
+  color: #6b7280;
   font-weight: 400;
 }
 
-/*
-   Tarjetas
-   */
+/* Tarjetas */
 
 .contenedor-tarjetas{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -238,16 +260,14 @@ main{
 
 .tarjeta{
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow2);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
   padding: 18px;
   flex: 1 1 320px;
   max-width: 520px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   text-align: center;
-
-  
 }
 
 .tarjeta:hover{
@@ -267,11 +287,9 @@ main{
   height: 60px;
   border-radius: 50%;
   margin: 0 auto 12px auto;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: linear-gradient(135deg, #d100b8, #7c2cff);
   color: #ffffff;
   font-size: 24px;
@@ -284,19 +302,17 @@ main{
 
 .tarjeta a{
   font-weight: 800;
-  color: var(--primary);
+  color: #d100b8;
 }
 
-/* 
-   Servicios
-    */
+/* Servicios */
 
 .servicios{
   padding: 10px 0 0;
 }
 
 .filtros{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 0 auto 14px;
   display: flex;
   gap: 10px;
@@ -307,7 +323,7 @@ main{
 .chip{
   padding: 10px 14px;
   border-radius: 999px;
-  border: 1px solid var(--line);
+  border: 1px solid #e5e7eb;
   background: #fff;
   font-weight: 900;
   cursor: pointer;
@@ -320,7 +336,7 @@ main{
 }
 
 .services-grid{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -329,7 +345,7 @@ main{
 
 .tarjeta-servicio{
   background: #fff;
-  border: 1px solid var(--line);
+  border: 1px solid #e5e7eb;
   border-radius: 22px;
   padding: 22px;
   box-shadow: 0 10px 18px rgba(0,0,0,0.06);
@@ -426,18 +442,16 @@ main{
   transform: translateY(-1px);
 }
 
-/* 
-   Formularios
-    */
+/* Formularios */
 
 .form-card{
   width: min(760px, 92%);
   margin: 0 auto;
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
   padding: 22px;
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.08);
 }
 
 .form-card label{
@@ -465,7 +479,7 @@ main{
 
 .form-card input:focus,
 .form-card textarea:focus{
-  border-color: var(--primary);
+  border-color: #d100b8;
   box-shadow: 0 0 0 4px rgba(209,0,184,0.12);
 }
 
@@ -486,9 +500,7 @@ main{
   opacity: 0.96;
 }
 
-/* 
-   Acerca y Contacto 
-    */
+/* Acerca y Contacto */
 
 .acerca{
   background: #f3f4f6;
@@ -540,8 +552,9 @@ main{
     grid-template-columns: 1fr;
   }
 }
+
 .contacto-grid{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -551,13 +564,13 @@ main{
 
 .contacto-card{
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
   padding: 18px;
   display: flex;
   gap: 14px;
   align-items: flex-start;
-  box-shadow: var(--shadow2);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
 }
 
 .contacto-icon{
@@ -568,7 +581,7 @@ main{
   align-items: center;
   justify-content: center;
   background: rgba(209,0,184,0.10);
-  color: var(--primary);
+  color: #d100b8;
   font-size: 18px;
   flex: 0 0 auto;
 }
@@ -587,19 +600,19 @@ main{
 .contacto-link{
   display: inline-block;
   margin-top: 4px;
-  color: var(--primary);
+  color: #d100b8;
   font-weight: 900;
 }
 
 /* FAQ grande */
 .faq-card{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 18px auto 0;
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
   padding: 22px;
-  box-shadow: var(--shadow2);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
 }
 
 .faq-card h3{
@@ -610,10 +623,9 @@ main{
 }
 
 .faq-sub{
-  color: var(--muted);
+  color: #6b7280;
   margin-bottom: 12px;
   text-align: center;
-  
 }
 
 .faq-card h4{
@@ -626,19 +638,17 @@ main{
   margin-top: 6px;
 }
 
-/* 
-   Footer
-   */
+/* Footer */
 
 .footer-beconnect{
   margin-top: 50px;
-  background: var(--dark);
+  background: #0b1220;
   color: #fff;
   padding: 32px 0 18px;
 }
 
 .footer-content{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -683,7 +693,7 @@ main{
 
 /* Línea divisoria */
 .footer-line{
-  width: min(var(--max), 92%);
+  width: min(1100px, 92%);
   margin: 22px auto 14px;
   height: 1px;
   background: rgba(255,255,255,0.18);
@@ -709,8 +719,6 @@ main{
   }
 }
 
-
-
 @media (max-width: 900px){
   .services-grid{
     grid-template-columns: 1fr;
@@ -725,4 +733,237 @@ main{
   .hero{
     padding: 60px 14px 40px;
   }
+}
+
+/* API Ubicación */
+
+.campo-ubicacion{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn-ubicacion{
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 14px;
+  background: #111827;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.2s ease;
+}
+
+.btn-ubicacion:hover{
+  transform: translateY(-1px);
+  opacity: 0.96;
+}
+
+.resultado-ubicacion{
+  margin-top: 6px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.ubicacion-ok p{
+  margin: 4px 0;
+}
+
+.mini-mapa{
+  margin-top: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 18px rgba(0,0,0,0.06);
+}
+
+.mini-mapa iframe{
+  display: block;
+  width: 100%;
+  height: 250px;
+}
+
+/*botones accesibilidad*/
+
+.accesibilidad-controles{
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.accesibilidad-controles button{
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #111827;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.accesibilidad-controles button:hover{
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+
+
+
+/* =========================
+   Modo contraste simplificado
+   ========================= */
+
+.modo-contraste{
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* fondo general */
+.modo-contraste,
+.modo-contraste body,
+.modo-contraste main,
+.modo-contraste section,
+.modo-contraste .acerca,
+.modo-contraste .servicios,
+.modo-contraste .contacto,
+.modo-contraste .solicitar,
+.modo-contraste .ofrecer{
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+/* títulos */
+.modo-contraste h1,
+.modo-contraste h2,
+.modo-contraste h3,
+.modo-contraste h4,
+.modo-contraste h5,
+.modo-contraste h6,
+.modo-contraste label,
+.modo-contraste strong{
+  color: #fff !important;
+}
+
+/* textos secundarios */
+.modo-contraste p,
+.modo-contraste li,
+.modo-contraste span,
+.modo-contraste .header-seccion p,
+.modo-contraste .servicio-subtitulo,
+.modo-contraste .servicio-desc,
+.modo-contraste .servicio-meta,
+.modo-contraste .faq-sub{
+  color: #e5e7eb !important;
+}
+
+/* enlaces */
+.modo-contraste a{
+  color: #fff !important;
+}
+
+/* tarjetas y cajas */
+.modo-contraste .tarjeta,
+.modo-contraste .tarjeta-servicio,
+.modo-contraste .form-card,
+.modo-contraste .contacto-card,
+.modo-contraste .faq-card,
+.modo-contraste .acerca-card,
+.modo-contraste .hero{
+  background: #111 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+  box-shadow: none !important;
+}
+
+/* header y footer */
+.modo-contraste .header-principal,
+.modo-contraste .footer-beconnect{
+  background: #000 !important;
+  border-color: #fff !important;
+}
+
+/* inputs */
+.modo-contraste input,
+.modo-contraste textarea,
+.modo-contraste select{
+  background: #111 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.modo-contraste input::placeholder,
+.modo-contraste textarea::placeholder{
+  color: #bdbdbd !important;
+}
+
+/* botones */
+.modo-contraste button,
+.modo-contraste .btn,
+.modo-contraste .btn-servicio,
+.modo-contraste .btn-ubicacion,
+.modo-contraste .chip{
+  background: #111 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+.modo-contraste button:hover,
+.modo-contraste .btn:hover,
+.modo-contraste .btn-servicio:hover,
+.modo-contraste .btn-ubicacion:hover,
+.modo-contraste .chip:hover{
+  background: #222 !important;
+}
+
+/* barra de accesibilidad */
+.modo-contraste .barra-accesibilidad button{
+  background: #4b4949 !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+}
+
+/* imágenes y mapas no cambian */
+.modo-contraste img,
+.modo-contraste iframe{
+  filter: none !important;
+}
+
+
+
+
+/* Barra lateral de accesibilidad */
+.barra-accesibilidad{
+  position: fixed;
+  right: 16px;
+  top: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  z-index: 999;
+}
+
+.barra-accesibilidad button{
+  width: 46px;
+  height: 46px;
+  border: none;
+  border-radius: 8px;
+  background: #4a4a4a;
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.barra-accesibilidad button:hover{
+  background: #2f2f2f;
+  transform: translateY(-2px);
 }
