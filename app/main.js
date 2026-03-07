@@ -136,3 +136,39 @@ function actualizarMigasPan() {
 
 window.addEventListener("hashchange", actualizarMigasPan);
 document.addEventListener("DOMContentLoaded", actualizarMigasPan);
+
+
+/*Expresiones regulares*/
+document.addEventListener("DOMContentLoaded", () => {
+  const formularioSolicitar = document.querySelector('#solicitar form');
+
+  if (formularioSolicitar) {
+    formularioSolicitar.addEventListener("submit", (e) => {
+      const nombre = document.getElementById("nombre").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+      const telefono = document.getElementById("telefono").value.trim();
+
+      const regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}$/;
+      const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const regexTelefono = /^[0-9]{7,10}$/;
+
+      if (!regexNombre.test(nombre)) {
+        alert("El nombre solo debe contener letras y espacios.");
+        e.preventDefault();
+        return;
+      }
+
+      if (!regexCorreo.test(correo)) {
+        alert("Ingresa un correo electrónico válido.");
+        e.preventDefault();
+        return;
+      }
+
+      if (!regexTelefono.test(telefono)) {
+        alert("El teléfono debe tener solo números y entre 7 y 10 dígitos.");
+        e.preventDefault();
+        return;
+      }
+    });
+  }
+});

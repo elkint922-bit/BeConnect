@@ -816,9 +816,7 @@ main{
 
 
 
-/* =========================
-   Modo contraste simplificado
-   ========================= */
+/* Contraste */
 
 .modo-contraste{
   background: #000 !important;
@@ -933,6 +931,31 @@ main{
 .modo-contraste img,
 .modo-contraste iframe{
   filter: none !important;
+}
+/* Color para el hero en modo contraste */
+.modo-contraste .hero{
+  background: linear-gradient(135deg, #c026d3, #7c3aed) !important;
+  border: 1px solid #ffffff !important;
+}
+
+/* Texto del hero */
+.modo-contraste .hero h2{
+  color: #ffffff !important;
+}
+
+.modo-contraste .hero p{
+  color: #f3f4f6 !important;
+}
+
+/* Botones del hero */
+.modo-contraste .hero .btn-servicio{
+  background: #ffffff !important;
+  color: #111827 !important;
+  border: none !important;
+}
+
+.modo-contraste .hero .btn-servicio:hover{
+  background: #e5e7eb !important;
 }
 
 

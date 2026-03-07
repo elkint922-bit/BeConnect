@@ -244,14 +244,20 @@
       </header>
 
       <form class="form-card">
-        <label for="nombre">Nombre completo</label>
-        <input id="nombre" type="text" placeholder="Juan Pérez" required>
+       <label for="nombre">Nombre completo</label>
+         <input id="nombre" type="text" placeholder="Juan Pérez" required
+          pattern="^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}$"
+           title="Ingresa solo letras y espacios, entre 3 y 50 caracteres">
 
-        <label for="correo">Correo</label>
-        <input id="correo" type="email" placeholder="correo@ejemplo.com" required>
+       <label for="correo">Correo</label>
+        <input id="correo" type="email" placeholder="correo@ejemplo.com" required
+          pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+           title="Ingresa un correo válido">
 
-        <label for="telefono">Teléfono</label>
-        <input id="telefono" type="tel" placeholder="3001234567" required>
+      <label for="telefono">Teléfono</label>
+       <input id="telefono" type="tel" placeholder="3001234567" required
+          pattern="^[0-9]{7,10}$"
+          title="Ingresa solo números, entre 7 y 10 dígitos">
 
         <label for="categoria">Categoría</label>
         <input id="categoria" type="text" placeholder="Belleza o Tecnología" required>
